@@ -1,0 +1,11 @@
+.vscode/
+.vs/
+*.exe
+*.out
+*.o
+*.log
+*.bat
+*.sh
+*.swp
+build/
+__pycache__/
