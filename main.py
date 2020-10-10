@@ -3,6 +3,13 @@ import stocks.update
 import mainList.update
 import filter.company
 
+import os
+if not os.path.exists('stocks/dat'):
+    print('mkdir')
+    os.makedirs('stocks/dat')
+else:
+    print('not mkdir')
+
 if 'Y' in input('update(Y/N): '):
     print('updating...')
     # update mainList
