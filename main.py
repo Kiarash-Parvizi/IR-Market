@@ -3,15 +3,17 @@ import stocks.update
 import mainList.update
 import filter.company
 
-# update mainList
-#mainList.update.run()
+if 'Y' in input('update(Y/N): '):
+    print('updating...')
+    # update mainList
+    mainList.update.run()
+    # update stocks
+    stocks.update.run('mainList/dat.txt')
+    print("update finished")
+if 'N' in input('run-basic-analysis(Y/N)'):
+    exit()
 
-# update stocks
-#stocks.update.run('mainList/dat.txt')
-#print("update finished")
-#exit()
-
-print("technical analysis...")
+print("basic analysis...")
 days = 20
 
 comLis = stocks.company.load_all()

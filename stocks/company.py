@@ -20,9 +20,10 @@ holdersAV_pattern = re.compile(r'"جمع حقوق صاحبان سهام",{"_Id":
 highest_monthVol = 0
 
 class company:
-    def __init__(self, id: str, name: str):
+    def __init__(self, id: str, name: str, symbol: str):
         self.id = id
         self.name = name
+        self.symbol = symbol
         self.prices = []
         #get data from tsetmc
         addr = url_template.format(id = id)

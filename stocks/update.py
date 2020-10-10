@@ -23,7 +23,7 @@ def run(location: str):
         if not isMainCompany(subs[2]):
             continue
         ids[subs[0]] = subs[2]
-        c = company(subs[0], subs[2])
+        c = company(subs[0], subs[2], subs[1])
         c.save()
 
 def get_stocks():
